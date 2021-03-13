@@ -4,6 +4,7 @@ import "./App.css";
 import Login from "./components/Login";
 import Verify from "./components/Verify";
 import Loader from "./utilities/loader/Loader";
+import Form from "./components/Form";
 function App() {
   const [route, setRoute] = useState(0);
   const [contact, setContact] = useState();
@@ -32,6 +33,8 @@ function App() {
           setLoading={setLoading}
           setAlert={setAlert}
         />
+      ) : route === 2 ? (
+        <Form />
       ) : (
         <></>
       )}
